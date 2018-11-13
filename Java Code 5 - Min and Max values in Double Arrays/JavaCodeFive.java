@@ -3,11 +3,11 @@
 JAVA - Find Maximum and Minimum Values in Double Arrays (Matrices) - TUTORIAL FIVE
 ----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*
-NB:	If you have not seen my previous java tutorials and you have no coding experience please go back to see the basic functions and methods you need
-	for the rest of the tutorials.
+NB:	If you have not seen my previous java coding material and you have no coding experience please go back to see the basic functions and methods
+	you need for the rest of the coding material.
 
 TIPS:
--In this tutorial two 4(rows)x4(columns) Matrixs (Double Arrays) will be created and compared
+-In this java program two 4(rows)x4(columns) Matrixs (Double Arrays) will be created and compared
 -We will generate random numbers and refer to them as IQ's
 -We will try and find the highest and lowest IQ in the two Matrixs, searching through both of them
 */

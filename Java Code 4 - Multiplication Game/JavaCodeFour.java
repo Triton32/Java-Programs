@@ -1,10 +1,11 @@
 /*
 ----------------------------------------------------------------------------------------------------------------------------------------------------
-JAVA - MultiplicationGame - TUTORIAL Four
+AUTHOR: TRITON -(STEFAN MUNNIK)
+JAVA - Arrays and Scanning - CODE Four
 ----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*
-NB:	If you have not seen my previous java tutorials and you have no coding experience please go back to see the basic functions and methods you need
-	for the rest of the tutorials.
+NB:	If you have not seen my previous java coding material and you have no coding experience please go back to see the basic functions and methods
+	you need for the rest of the coding material.
 
 TIPS:
 -In this game there is 3 different levels. If you guess 8 to 10 right you move on to the next level otherwise you get moved down a level or if you
@@ -15,11 +16,10 @@ import java.util.Scanner;
 
 public class JavaCodeFour{
 	public static int level = 1;													//Declare the starting level of the user which is 1
-	public static int correct = 0;													//Variable containing how much the user guessed right
 	
-	public static void CheckUserInput(int low, int high){//Variable low and high is the lower and highest number of the range of random numbers
+	public int CheckUserInput(int low, int high){//Variable low and high is the lower and highest number of the range of random numbers
 									//1,6,11	//5,10,15
-		correct = 0;																//Correct numbers be equal to 0 after each level to start over															
+		int correct = 0;															//Variable containing how much the user guessed right																//Correct numbers be equal to 0 after each level to start over															
 		for (int i = 0; i<10; i++){													//After 10 questions break out the for loop
 			int number1 = (int)(low + Math.random()*(high-low+1));					//Generate 1st random number from low-high range ex. 1-5(1st level)
 			int number2 = (int)(low + Math.random()*(high-low+1));					//Generate 2st random number from low-high range ex. 1-5(1st level)
@@ -36,17 +36,19 @@ public class JavaCodeFour{
 				System.out.println("Wrong!\n");										//Print wrong if answered wrong
 			}
 		}
+		return correct;																//Return value guessed correctely
 	}
 	
-	public void Levels(){													/*This method calls method CheckUserInput 
+	public int Levels(){													/*This method calls method CheckUserInput 
 																					and checks the users correct guesses*/
 		//Will always be true until it breaks out of the loop
 		while (true){																//Continue looping until it breaks out (loose or win)
+			int correct = 0;
 			if (level == 1){														/*If the level equals 1 set the highest random multiplication
 																					number to 5 and lowest to 1*/
 				int low = 1;														
 				int high = 5;
-				CheckUserInput(low, high);											//Call the function CheckUserInput and use the low and high variables
+				correct = CheckUserInput(low, high);											//Call the function CheckUserInput and use the low and high variables
 				if (correct >= 8 && correct <= 10){									//If the amount guessed correct is between 8 and 10
 					System.out.println("Congradulations, you can move on to level 2!");//Print you can move on to next level
 					level = 2;														//Set the level to 2 (next level)
@@ -60,7 +62,7 @@ public class JavaCodeFour{
 																					number to 6 and lowest to 10*/
 				int low = 6;
 				int high = 10;														
-				CheckUserInput(low, high);
+				correct = CheckUserInput(low, high);
 				if (correct >= 8 && correct <= 10){									//Move on to level 3 if the amount guessed correct is between 8 and 10
 					System.out.println("Congradulations, you can move on to level 3!");
 					level = 3;
@@ -75,7 +77,7 @@ public class JavaCodeFour{
 																					number to 11 and lowest to 15*/
 				int low = 11;
 				int high = 15;
-				CheckUserInput(low, high);
+				correct = CheckUserInput(low, high);
 				if (correct >= 8 && correct <= 10){									//If the amount guessed correct is between 8 and 10, print you have won
 					System.out.println("CONGRADULATIONS!!! YOU HAVE WON THE GAME!!!");
 					break;															//Break out of the while loop if the game is won
@@ -86,6 +88,7 @@ public class JavaCodeFour{
 				}
 			}
 		}
+		return level;
 	}
 	
 	public static void main(String[] args){

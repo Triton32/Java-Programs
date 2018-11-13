@@ -4,11 +4,11 @@ JAVA - Reading From a File - TUTORIAL SIX
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
 /*
-NB:	If you have not seen my previous java tutorials and you have no coding experience please go back to see the basic functions and methods you need
-	for the rest of the tutorials.
+NB:	If you have not seen my previous java coding material and you have no coding experience please go back to see the basic functions and methods
+	you need for the rest of the coding material.
 
 TIPS:
--In this tutorial we will test if a string input is a java identifier.
+-In this java program we will test if a string input is a java identifier.
 -A string is a java identifier if there are only underscores, alphabet characters, dollars and numbers.
 -A java identifier may not begin with a number.
 -We are going to ask the user to input a string and test if it is or is not a java identifier.
