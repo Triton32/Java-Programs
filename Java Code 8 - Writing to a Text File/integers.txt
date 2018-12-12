@@ -1,0 +1,12 @@
+1 times 6 = 6
+2 times 6 = 12
+3 times 6 = 18
+4 times 6 = 24
+5 times 6 = 30
+6 times 6 = 36
+7 times 6 = 42
+8 times 6 = 48
+9 times 6 = 54
+10 times 6 = 60
+11 times 6 = 66
+12 times 6 = 72
